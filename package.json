@@ -1,0 +1,72 @@
+{
+  "name": "termitranslate",
+  "version": "1.0.1",
+  "private": false,
+  "main": "./dist/index.js",
+  "browser": "./dist/index.js",
+  "module": "./dist/index.js",
+  "unpkg": "./dist/index.js",
+  "jsdelivr": "./dist/index.js",
+  "description": "A command line tool for quick and easy translation in the terminal.",
+  "scripts": {
+    "start": "tsx ./src/cli.ts",
+    "prepublishOnly": "npm run build",
+    "build": "tsc -p tsconfig.json --declaration"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dext7r/TermiTranslate.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "keywords": [
+    "translation",
+    "language",
+    "terminal",
+    "CLI",
+    "tools",
+    "multilingual",
+    "translator"
+  ],
+  "bin": {
+    "termitranslate": "./dist/cli.js",
+    "translate": "./dist/cli.js",
+    "tt": "./dist/cli.js"
+  },
+  "author": {
+    "name": "h7ml",
+    "mail": "h7ml@qq.com",
+    "github": "https://github.com/dext7r/TermiTranslate"
+  },
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/dext7r/TermiTranslate/issues"
+  },
+  "homepage": "https://github.com/dext7r/TermiTranslate#readme",
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "@types/qs": "^6.9.12"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "chalk": "^5.3.0",
+    "commander": "^12.0.0",
+    "ora": "^8.0.1",
+    "qs": "^6.11.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3"
+  }
+}
